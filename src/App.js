@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import CheckIcon from '@mui/icons-material/Check';
+import ClearIcon from '@mui/icons-material/Clear';
 
 function App() {
   const cardContent = [
@@ -68,6 +69,7 @@ function Distributer({ cardContent }) {
                 support = {cont.support}
                 subdomain = {cont.subdomain}
                 statusreport = {cont.statusreport}
+                id = {cont.index}
                 />
           )
         })}
@@ -77,7 +79,8 @@ function Distributer({ cardContent }) {
 
 
 
-function CardDisp({option, price, user, storage, publicprojects, access, privateprojects, support, subdomain, statusreport}) {
+function CardDisp({option, price, user, storage, publicprojects, access, privateprojects, support, subdomain, statusreport, id}) {
+  // let ids = {id};
   return (
     <Card id="card" sx={{ maxWidth: 300 }}>
     <CardContent>
@@ -106,19 +109,19 @@ function CardDisp({option, price, user, storage, publicprojects, access, private
             {access}
           </Typography>
         <Typography className="typo">
-          <CheckIcon />
+        {option == "FREE" ? <ClearIcon /> : <CheckIcon />}
             {privateprojects}
           </Typography>
         <Typography className="typo">
-          <CheckIcon />
+        {option == "FREE" ? <ClearIcon /> : <CheckIcon />}
             {support}
           </Typography>
         <Typography className="typo">
-          <CheckIcon />
+        {option == "FREE" ? <ClearIcon /> : <CheckIcon />}
             {subdomain}
           </Typography>
         <Typography className="typo">
-          <CheckIcon />
+        {option == "FREE" || option == "PLUS"? <ClearIcon /> : <CheckIcon />}
             {statusreport}
           </Typography>
       </div>
