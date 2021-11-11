@@ -5,9 +5,54 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to right, rgb(25, 0, 255), rgb(0, 140, 255));
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+#card:hover {
+  zoom: 1;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cardaction {
+  display: flex;
+  justify-content: center;
+}
+
+#btn {
+  border-radius: 2rem !important;
+  width: 100%;
+}
+
+.css-1xez8po-MuiPaper-root-MuiCard-root {
+  width: 50rem !important;
+}
+
+
+.typo {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.5rem 0 !important;
 }
