@@ -42,7 +42,7 @@ function App() {
       access: "Community Access",
       privateprojects: "Unlimited Private Projects",
       support: "Dedicated Phone Support",
-      subdomain: "Free Subdomain",
+      subdomain: "Unlimited Free Subdomain",
       statusreport: "Monthly Status Report"
     }
   ]
@@ -80,7 +80,8 @@ function Distributer({ cardContent }) {
 
 
 function CardDisp({option, price, user, storage, publicprojects, access, privateprojects, support, subdomain, statusreport, id}) {
-  // let ids = {id};
+  const style1 = {color: option == "FREE" ? "lightgrey" : "black"}
+  const style2 = {color: option == "FREE" || option == "PLUS" ? "lightgrey" : "black"}
   return (
     <Card id="card" sx={{ maxWidth: 300 }}>
     <CardContent>
@@ -108,19 +109,19 @@ function CardDisp({option, price, user, storage, publicprojects, access, private
           <CheckIcon />
             {access}
           </Typography>
-        <Typography className="typo">
+        <Typography className="typo" style={style1}>
         {option == "FREE" ? <ClearIcon /> : <CheckIcon />}
             {privateprojects}
           </Typography>
-        <Typography className="typo">
+        <Typography className="typo" style={style1}>
         {option == "FREE" ? <ClearIcon /> : <CheckIcon />}
             {support}
           </Typography>
-        <Typography className="typo">
+        <Typography className="typo" style={style1}>
         {option == "FREE" ? <ClearIcon /> : <CheckIcon />}
             {subdomain}
           </Typography>
-        <Typography className="typo">
+        <Typography className="typo" style={style2}>
         {option == "FREE" || option == "PLUS"? <ClearIcon /> : <CheckIcon />}
             {statusreport}
           </Typography>

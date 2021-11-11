@@ -27,7 +27,8 @@ code {
 }
 
 #card:hover {
-  zoom: 1;
+  cursor: pointer;
+  zoom: 1.02;
 }
 
 .details {
@@ -44,6 +45,7 @@ code {
 #btn {
   border-radius: 2rem !important;
   width: 100%;
+  margin-bottom: 0.5rem;
 }
 
 .css-1xez8po-MuiPaper-root-MuiCard-root {
